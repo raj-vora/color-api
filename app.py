@@ -31,6 +31,7 @@ def get_colour_name(requested_colour):
 def color_detection_center():
     data = request.get_json()
     image_urlencoded = data['data']
+    return jsonify({'result':image_urlencoded})
     image_base64 = urllib.parse.unquote(image_urlencoded)
     image_not_in_format = base64.b64decode(image_base64)
     image_in_format = Image.open(io.BytesIO(image_not_in_format))
