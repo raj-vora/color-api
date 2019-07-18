@@ -29,6 +29,7 @@ def get_colour_name(requested_colour):
 
 @app.route('/',methods=['POST'])
 def color_detection_center():
+    return "Success"
     data = request.get_json()
     image_urlencoded = data['data']
     image_base64 = urllib.parse.unquote(image_urlencoded)
