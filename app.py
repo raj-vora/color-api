@@ -1,5 +1,5 @@
 from flask import Flask,request,jsonify
-import cv2
+#import cv2
 import numpy as np
 import urllib.parse,base64
 from PIL import Image
