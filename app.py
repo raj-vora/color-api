@@ -27,7 +27,7 @@ def get_colour_name(requested_colour):
 
 
 
-@app.route('/',methods=['POST'])
+@app.route('/',methods=['GET'])
 def color_detection_center():
     return "Success"
     data = request.get_json()
