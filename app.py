@@ -44,8 +44,8 @@ def color_detection_center():
     actual_name, closest_name = get_colour_name(requested_colour)
 
     #print ("Actual colour name:", actual_name, ", closest colour name:", closest_name)
-
-    return jsonify(result='success',color=closest_name)
+    return closest_name
+    #return jsonify(result='success',color=closest_name)
 
 if __name__ == '__main__':
     app.run(debug=True)
