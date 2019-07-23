@@ -36,9 +36,11 @@ def color_detection_center():
     image_in_format = Image.open(io.BytesIO(image_not_in_format))
     a = np.array(image_in_format)
     #print(a)
-    color_here = list()
-    for i in range(round(a.shape[0]/4),round(3*a.shape[0]/4),100):
-    	for j in range(round(a.shape[1]/4),round(3*a.shape[1]/4),100):
+    color_here = []
+    center_x = round(a.shape[0]/2)
+    center_y = round(a.shape[1]/2)
+    for i in range(center_y-50,center_y+50,10):
+    	for j in range(center_x-50,center_x+50,10):
     		color_here.append(a[i][j].tolist())
 
     color_here_final = max(color_here,key=color_here.count)
