@@ -43,7 +43,7 @@ def color_detection_center():
     		color_here.append(a[i][j].tolist())
 
     color_here_final = max(color_here,key=color_here.count)
-    requested_colour = color_here_final[::-1]
+    #requested_colour = color_here_final[::-1]
     actual_name, closest_name = get_colour_name(requested_colour)
 
     #print ("Actual colour name:", actual_name, ", closest colour name:", closest_name)
